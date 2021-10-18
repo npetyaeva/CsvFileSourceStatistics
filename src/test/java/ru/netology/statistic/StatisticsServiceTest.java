@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class StatisticsServiceTest {
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/data.csv", delimiter = ';', numLinesToSkip = 1)
+    @CsvFileSource(resources = "/dataCalculateSum.csv", delimiter = ';', numLinesToSkip = 1)
     void souldCalculateSum(String purchases, long expected) {
 
         StatisticsService service = new StatisticsService();
@@ -19,7 +19,7 @@ class StatisticsServiceTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/data.csv", delimiter = ';', numLinesToSkip = 2)
+    @CsvFileSource(resources = "/dataFindMax.csv", delimiter = ';', numLinesToSkip = 1)
     void souldFindMax(String purchases, long expected) {
 
         StatisticsService service = new StatisticsService();
